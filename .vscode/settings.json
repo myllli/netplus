@@ -1,0 +1,22 @@
+{
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "files.associations": {
+        "*.html": "html"
+    },
+    "html.validate.scripts": true,
+    "html.validate.styles": false,
+    "html.validate.scripts": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "css.lint.unknownAtRules": "ignore",
+    "css.lint.unknownProperties": "ignore",
+    "css.lint.unknownVendorProperties": "ignore"
+} 
