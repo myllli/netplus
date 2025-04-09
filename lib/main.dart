@@ -41,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
       );
     });
   }
@@ -303,6 +303,51 @@ class _HomeScreenState extends State<HomeScreen>
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(height: 50),
+            Image.asset(
+              'assets/images/netplus_logo.png',
+              width: 150,
+              height: 150,
+            ),
+            const SizedBox(height: 80),
+            GestureDetector(
+              onTap: () {
+                // Handle Kakao login
+              },
+              child: Image.asset(
+                'assets/images/kakao_login.png',
+                width: 200,
+              ),
+            ),
+            const SizedBox(height: 20),
+            GestureDetector(
+              onTap: () {
+                // Handle Naver login
+              },
+              child: Image.asset(
+                'assets/images/naver_login.png',
+                width: 200,
+              ),
+            ),
+            const SizedBox(height: 50),
+          ],
         ),
       ),
     );

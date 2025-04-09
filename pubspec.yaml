@@ -66,6 +66,8 @@ flutter:
   assets:
     - assets/images/netplus_logo.png
     - assets/images/netplus_icon.png
+    - assets/images/naver_login.png
+    - assets/images/kakao_login.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
