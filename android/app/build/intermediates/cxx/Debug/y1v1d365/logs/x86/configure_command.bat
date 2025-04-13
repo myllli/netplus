@@ -1,0 +1,20 @@
+@echo off
+"C:\\CookAndroid\\SDK\\cmake\\3.22.1\\bin\\cmake.exe" ^
+  "-HC:\\flutter\\packages\\flutter_tools\\gradle\\src\\main\\groovy" ^
+  "-DCMAKE_SYSTEM_NAME=Android" ^
+  "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON" ^
+  "-DCMAKE_SYSTEM_VERSION=19" ^
+  "-DANDROID_PLATFORM=android-19" ^
+  "-DANDROID_ABI=x86" ^
+  "-DCMAKE_ANDROID_ARCH_ABI=x86" ^
+  "-DANDROID_NDK=C:\\CookAndroid\\SDK\\ndk\\25.1.8937393" ^
+  "-DCMAKE_ANDROID_NDK=C:\\CookAndroid\\SDK\\ndk\\25.1.8937393" ^
+  "-DCMAKE_TOOLCHAIN_FILE=C:\\CookAndroid\\SDK\\ndk\\25.1.8937393\\build\\cmake\\android.toolchain.cmake" ^
+  "-DCMAKE_MAKE_PROGRAM=C:\\CookAndroid\\SDK\\cmake\\3.22.1\\bin\\ninja.exe" ^
+  "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\\andapps\\netplus\\android\\app\\build\\intermediates\\cxx\\Debug\\y1v1d365\\obj\\x86" ^
+  "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=C:\\andapps\\netplus\\android\\app\\build\\intermediates\\cxx\\Debug\\y1v1d365\\obj\\x86" ^
+  "-DCMAKE_BUILD_TYPE=Debug" ^
+  "-BC:\\andapps\\netplus\\android\\app\\.cxx\\Debug\\y1v1d365\\x86" ^
+  -GNinja ^
+  -Wno-dev ^
+  --no-warn-unused-cli

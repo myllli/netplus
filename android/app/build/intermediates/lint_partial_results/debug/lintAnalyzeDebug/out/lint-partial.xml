@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.7.0" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.capstone.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="attr[android_colorBackground(R)],color[ic_launcher_background(U)],drawable[launch_background(U),ic_launcher_foreground(U)],mipmap[ic_launcher(U)],style[LaunchTheme(U),NormalTheme(U)];4^1^3,5^2,6^0;;;"/>
+    </map>
+
+</incidents>

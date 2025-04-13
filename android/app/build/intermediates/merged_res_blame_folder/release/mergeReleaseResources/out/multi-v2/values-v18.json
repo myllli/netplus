@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.capstone.app-mergeReleaseResources-31:/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\김민성\\.gradle\\caches\\8.10.2\\transforms\\2e79ea498e76ee20e73da770dafefdca\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}

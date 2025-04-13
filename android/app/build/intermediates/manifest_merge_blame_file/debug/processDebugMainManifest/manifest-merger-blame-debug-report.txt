@@ -1,0 +1,299 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.capstone"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="35" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:3:5-67
+15-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:3:22-64
+16    <!--
+17     Required to query activities that can process text, see:
+18         https://developer.android.com/training/package-visibility and
+19         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+20
+21         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+22    -->
+23    <queries>
+23-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:52:5-57:15
+24        <intent>
+24-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:53:9-56:18
+25            <action android:name="android.intent.action.PROCESS_TEXT" />
+25-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:54:13-72
+25-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:54:21-70
+26
+27            <data android:mimeType="text/plain" />
+27-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:38:17-79
+28        </intent>
+29
+30        <package android:name="com.kakao.talk" />
+30-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:9-50
+30-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:18-47
+31        <package android:name="com.kakao.talk.alpha" />
+31-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:9-56
+31-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:18-53
+32        <package android:name="com.kakao.talk.sandbox" />
+32-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:9-58
+32-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:18-55
+33        <package android:name="com.kakao.onetalk" />
+33-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:9-53
+33-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:18-50
+34        <package android:name="com.locnall.KimGiSa" />
+34-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:9-55
+34-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:18-52
+35        <package android:name="com.lguplus.navi" />
+35-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:9-52
+35-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:18-49
+36
+37        <intent>
+37-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:15:9-21:18
+38            <action android:name="android.intent.action.VIEW" />
+38-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:35:17-69
+38-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:35:25-66
+39
+40            <category android:name="android.intent.category.BROWSABLE" />
+40-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:37:17-78
+40-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:37:27-75
+41
+42            <data android:scheme="https" />
+42-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:38:17-79
+42-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:38:23-77
+43        </intent>
+44    </queries>
+45
+46    <permission
+46-->[androidx.core:core:1.13.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\9400b99c4393d23db36029ebbdce0fab\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+47        android:name="com.example.capstone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+47-->[androidx.core:core:1.13.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\9400b99c4393d23db36029ebbdce0fab\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+48        android:protectionLevel="signature" />
+48-->[androidx.core:core:1.13.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\9400b99c4393d23db36029ebbdce0fab\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+49
+50    <uses-permission android:name="com.example.capstone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+50-->[androidx.core:core:1.13.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\9400b99c4393d23db36029ebbdce0fab\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+50-->[androidx.core:core:1.13.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\9400b99c4393d23db36029ebbdce0fab\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+51
+52    <application
+52-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:4:5-46:19
+53        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+53-->[androidx.core:core:1.13.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\9400b99c4393d23db36029ebbdce0fab\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+54        android:debuggable="true"
+55        android:extractNativeLibs="false"
+56        android:icon="@mipmap/ic_launcher"
+56-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:6:9-43
+57        android:label="capstone"
+57-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:5:9-33
+58        android:testOnly="true" >
+59        <meta-data
+59-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:7:9-9:64
+60            android:name="com.kakao.sdk.AppKey"
+60-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:8:13-48
+61            android:value="75080664d9d7058a5657030c4ad5bad6" />
+61-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:9:13-61
+62
+63        <activity
+63-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:11:9-40:20
+64            android:name="com.example.capstone.MainActivity"
+64-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:12:13-41
+65            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+65-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:18:13-163
+66            android:exported="true"
+66-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:13:13-36
+67            android:hardwareAccelerated="true"
+67-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:19:13-47
+68            android:launchMode="singleTop"
+68-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:15:13-43
+69            android:taskAffinity=""
+69-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:16:13-36
+70            android:theme="@style/LaunchTheme"
+70-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:17:13-47
+71            android:windowSoftInputMode="adjustResize" >
+71-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:20:13-55
+72
+73            <!--
+74                 Specifies an Android theme to apply to this Activity as soon as
+75                 the Android process has started. This theme is visible to the user
+76                 while the Flutter UI initializes. After that, this theme continues
+77                 to determine the Window background behind the Flutter UI.
+78            -->
+79            <meta-data
+79-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:25:13-28:17
+80                android:name="io.flutter.embedding.android.NormalTheme"
+80-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:26:15-70
+81                android:resource="@style/NormalTheme" />
+81-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:27:15-52
+82
+83            <intent-filter>
+83-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:29:13-32:29
+84                <action android:name="android.intent.action.MAIN" />
+84-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:30:17-68
+84-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:30:25-66
+85
+86                <category android:name="android.intent.category.LAUNCHER" />
+86-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:31:17-76
+86-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:31:27-74
+87            </intent-filter>
+88            <intent-filter>
+88-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:34:13-39:29
+89                <action android:name="android.intent.action.VIEW" />
+89-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:35:17-69
+89-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:35:25-66
+90
+91                <category android:name="android.intent.category.DEFAULT" />
+91-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:36:17-76
+91-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:36:27-73
+92                <category android:name="android.intent.category.BROWSABLE" />
+92-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:37:17-78
+92-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:37:27-75
+93
+94                <data android:scheme="kakao75080664d9d7058a5657030c4ad5bad6" />
+94-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:38:17-79
+94-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:38:23-77
+95            </intent-filter>
+96        </activity>
+97        <!--
+98             Don't delete the meta-data below.
+99             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+100        -->
+101        <meta-data
+101-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:43:9-45:33
+102            android:name="flutterEmbedding"
+102-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:44:13-44
+103            android:value="2" />
+103-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:45:13-30
+104
+105        <activity
+105-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:25:9-30:56
+106            android:name="com.kakao.sdk.flutter.TalkAuthCodeActivity"
+106-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:26:13-70
+107            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+107-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:13-81
+108            android:exported="false"
+108-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:28:13-37
+109            android:launchMode="singleTask"
+109-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:29:13-44
+110            android:theme="@style/TransparentCompat" />
+110-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:30:13-53
+111        <activity
+111-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:31:9-35:56
+112            android:name="com.kakao.sdk.flutter.CustomTabsActivity"
+112-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:32:13-68
+113            android:exported="true"
+113-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:33:13-36
+114            android:launchMode="singleTask"
+114-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:34:13-44
+115            android:theme="@style/TransparentCompat" />
+115-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:35:13-53
+116        <activity
+116-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:36:9-40:56
+117            android:name="com.kakao.sdk.flutter.AuthCodeCustomTabsActivity"
+117-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:37:13-76
+118            android:exported="true"
+118-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:38:13-36
+119            android:launchMode="singleTask"
+119-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:39:13-44
+120            android:theme="@style/TransparentCompat" />
+120-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:40:13-53
+121        <activity
+121-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:41:9-45:56
+122            android:name="com.kakao.sdk.flutter.FollowChannelHandlerActivity"
+122-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:42:13-78
+123            android:exported="true"
+123-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:43:13-36
+124            android:launchMode="singleTask"
+124-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:44:13-44
+125            android:theme="@style/TransparentCompat" />
+125-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:45:13-53
+126        <activity
+126-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:46:9-50:56
+127            android:name="com.kakao.sdk.flutter.AppsHandlerActivity"
+127-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:47:13-69
+128            android:exported="true"
+128-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:48:13-36
+129            android:launchMode="singleTask"
+129-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:49:13-44
+130            android:theme="@style/TransparentCompat" />
+130-->[:kakao_flutter_sdk_common] C:\Users\김민성\AppData\Local\Pub\Cache\hosted\pub.dev\kakao_flutter_sdk_common-1.9.7+3\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:50:13-53
+131
+132        <uses-library
+132-->[androidx.window:window:1.2.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\cf0490f929d4c1d4fab84e1a3ff86bfe\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+133            android:name="androidx.window.extensions"
+133-->[androidx.window:window:1.2.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\cf0490f929d4c1d4fab84e1a3ff86bfe\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+134            android:required="false" />
+134-->[androidx.window:window:1.2.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\cf0490f929d4c1d4fab84e1a3ff86bfe\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+135        <uses-library
+135-->[androidx.window:window:1.2.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\cf0490f929d4c1d4fab84e1a3ff86bfe\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+136            android:name="androidx.window.sidecar"
+136-->[androidx.window:window:1.2.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\cf0490f929d4c1d4fab84e1a3ff86bfe\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+137            android:required="false" />
+137-->[androidx.window:window:1.2.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\cf0490f929d4c1d4fab84e1a3ff86bfe\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+138
+139        <provider
+139-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\22a63fc235ee3433459e11310b9231ca\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+140            android:name="androidx.startup.InitializationProvider"
+140-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\22a63fc235ee3433459e11310b9231ca\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
+141            android:authorities="com.example.capstone.androidx-startup"
+141-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\22a63fc235ee3433459e11310b9231ca\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
+142            android:exported="false" >
+142-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\22a63fc235ee3433459e11310b9231ca\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
+143            <meta-data
+143-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\22a63fc235ee3433459e11310b9231ca\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+144                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+144-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\22a63fc235ee3433459e11310b9231ca\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+145                android:value="androidx.startup" />
+145-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\김민성\.gradle\caches\8.10.2\transforms\22a63fc235ee3433459e11310b9231ca\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+146            <meta-data
+146-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+147                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+147-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+148                android:value="androidx.startup" />
+148-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+149        </provider>
+150
+151        <receiver
+151-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+152            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+152-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+153            android:directBootAware="false"
+153-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+154            android:enabled="true"
+154-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+155            android:exported="true"
+155-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+156            android:permission="android.permission.DUMP" >
+156-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+157            <intent-filter>
+157-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+158                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+158-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+158-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+159            </intent-filter>
+160            <intent-filter>
+160-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+161                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+161-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+161-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+162            </intent-filter>
+163            <intent-filter>
+163-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+164                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+164-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+164-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+165            </intent-filter>
+166            <intent-filter>
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+167                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\김민성\.gradle\caches\8.10.2\transforms\2dca474fcc6d93559ebbfcb7a5ec0e31\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+168            </intent-filter>
+169        </receiver>
+170    </application>
+171
+172</manifest>
