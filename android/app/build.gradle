@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'dev.flutter.flutter-gradle-plugin'
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localProperties.load(new FileInputStream(localPropertiesFile))
+}
+
+android {
+    namespace 'com.example.capstone'
+    compileSdkVersion flutter.compileSdkVersion
+
+    defaultConfig {
+        applicationId 'com.example.capstone'
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode 1
+        versionName "1.0.0"
+        minSdkVersion 23
+
+        // ⭐️ 여기 manifestPlaceholders 설정
+        manifestPlaceholders = [
+                KAKAO_NATIVE_APP_KEY: localProperties.getProperty('KAKAO_NATIVE_APP_KEY') ?: ""
+        ]
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.22'
+}
