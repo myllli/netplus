@@ -7,7 +7,7 @@ import 'secret.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   KakaoSdk.init(
-    nativeAppKey: 'kakaoNativeAppKey',
+    nativeAppKey: kakaoNativeAppKey,
   );
   runApp(const MyApp());
 }

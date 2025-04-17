@@ -31,7 +31,6 @@
 25-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:54:21-70
 26
 27            <data android:mimeType="text/plain" />
-27-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:38:17-79
 28        </intent>
 29
 30        <package android:name="com.kakao.talk" />
@@ -64,8 +63,6 @@
 40-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:37:27-75
 41
 42            <data android:scheme="https" />
-42-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:38:17-79
-42-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:38:23-77
 43        </intent>
 44    </queries>
 45
@@ -92,11 +89,8 @@
 57-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:5:9-33
 58        android:testOnly="true" >
 59        <meta-data
-59-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:7:9-9:64
 60            android:name="com.kakao.sdk.AppKey"
-60-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:8:13-48
 61            android:value="75080664d9d7058a5657030c4ad5bad6" />
-61-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:9:13-61
 62
 63        <activity
 63-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:11:9-40:20
@@ -154,8 +148,6 @@
 92-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:37:27-75
 93
 94                <data android:scheme="kakao75080664d9d7058a5657030c4ad5bad6" />
-94-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:38:17-79
-94-->C:\andapps\netplus\android\app\src\main\AndroidManifest.xml:38:23-77
 95            </intent-filter>
 96        </activity>
 97        <!--
