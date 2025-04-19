@@ -54,8 +54,7 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="capstone"
-        android:testOnly="true" >
+        android:label="capstone" >
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="75080664d9d7058a5657030c4ad5bad6" />

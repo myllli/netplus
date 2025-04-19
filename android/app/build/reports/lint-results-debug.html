@@ -179,14 +179,14 @@ document.getElementById(id).style.display = 'none';
     <div class="mdl-layout__header-row">
       <span class="mdl-layout-title">Lint Report: 8 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Thu Apr 10 17:54:29 KST 2025 by AGP (8.7.0)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sat Apr 19 03:25:32 KST 2025 by AGP (8.3.0)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
-      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (1)</a>
+      <a class="mdl-navigation__link" href="#InlinedApi"><i class="material-icons warning-icon">warning</i>Using inlined constants on older versions (1)</a>
       <a class="mdl-navigation__link" href="#ObsoleteSdkInt"><i class="material-icons warning-icon">warning</i>Obsolete SDK_INT Version Check (1)</a>
       <a class="mdl-navigation__link" href="#IconLauncherShape"><i class="material-icons warning-icon">warning</i>The launcher icon shape should use a distinct silhouette (5)</a>
       <a class="mdl-navigation__link" href="#MonochromeLauncherIcon"><i class="material-icons warning-icon">warning</i>Monochrome icon is not defined (1)</a>
@@ -206,7 +206,7 @@ document.getElementById(id).style.display = 'none';
 </td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
+<a href="#InlinedApi">InlinedApi</a>: Using inlined constants on older versions</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
@@ -220,7 +220,7 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#MonochromeLauncherIcon">MonochromeLauncherIcon</a>: Monochrome icon is not defined</td></tr>
-<tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (27)</a>
+<tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (19)</a>
 </td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (39)</a>
 </td></tr>
@@ -232,33 +232,38 @@ Dismiss</button>            </div>
             </div>
           </section>
 <a name="Correctness"></a>
-<a name="GradleDependency"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="GradleDependencyCard" style="display: block;">
+<a name="InlinedApi"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="InlinedApiCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Obsolete Gradle Dependency</h2>
+    <h2 class="mdl-card__title-text">Using inlined constants on older versions</h2>
   </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:44</span>: <span class="message">A newer version of org.jetbrains.kotlin:kotlin-stdlib-jdk7 than 1.9.22 is available: 2.1.0</span><br /><pre class="errorlines">
-<span class="lineno"> 41 </span>}
-<span class="lineno"> 42 </span>
-<span class="lineno"> 43 </span>dependencies {
-<span class="caretline"><span class="lineno"> 44 </span>    implementation <span class="warning"><span class="string">'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.22'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 45 </span>}
-</pre>
+<span class="location"><a href="../../src/main/kotlin/com/example/capstone/MainActivity.kt">../../src/main/kotlin/com/example/capstone/MainActivity.kt</a>:18</span>: <span class="message">Field requires API level 28 (current min is 23): <code>android.content.pm.PackageManager#GET_SIGNING_CERTIFICATES</code></span><br /><pre class="errorlines">
+<span class="lineno"> 15 </span>
+<span class="lineno"> 16 </span>  <span class="comment">// 🔥 여기 키 해시 출력 코드</span>
+<span class="lineno"> 17 </span>  <span class="keyword">try</span> {
+<span class="caretline"><span class="lineno"> 18 </span>      <span class="keyword">val</span> info = packageManager.getPackageInfo(packageName, <span class="warning">PackageManager.GET_SIGNING_CERTIFICATES</span>)</span>
+<span class="lineno"> 19 </span>
+<span class="lineno"> 20 </span>      <span class="keyword">if</span> (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+<span class="lineno"> 21 </span>          <span class="comment">// API 28 이상</span></pre>
 
 </div>
-<div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
-This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<div class="metadata"><div class="explanation" id="explanationInlinedApi" style="display: none;">
+This check scans through all the Android API field references in the application and flags certain constants, such as static final integers and Strings, which were introduced in later versions. These will actually be copied into the class files rather than being referenced, which means that the value is available even when running on older devices. In some cases that's fine, and in other cases it can result in a runtime crash or incorrect behavior. It depends on the context, so consider the code carefully and decide whether it's safe and can be suppressed or whether the code needs to be guarded.<br/>
+<br/>
+If you really want to use this API and don't need to support older devices just set the <code>minSdkVersion</code> in your <code>build.gradle</code> or <code>AndroidManifest.xml</code> files.<br/>
+<br/>
+If your code is <b>deliberately</b> accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the <code>@TargetApi</code> annotation specifying the local minimum SDK to apply, such as <code>@TargetApi(11)</code>, such that this check considers 11 rather than your manifest file's minimum SDK as the required API level.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "InlinedApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
 <div class="chips">
 <span class="mdl-chip">
-    <span class="mdl-chip__text">GradleDependency</span>
+    <span class="mdl-chip__text">InlinedApi</span>
 </span>
 <span class="mdl-chip">
     <span class="mdl-chip__text">Correctness</span>
@@ -267,13 +272,13 @@ To suppress this error, use the issue id "GradleDependency" as explained in the 
     <span class="mdl-chip__text">Warning</span>
 </span>
 <span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 4/10</span>
+    <span class="mdl-chip__text">Priority 6/10</span>
 </span>
 </div>
               </div>
               <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleDependencyLink" onclick="reveal('explanationGradleDependency');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="GradleDependencyCardLink" onclick="hideid('GradleDependencyCard');">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationInlinedApiLink" onclick="reveal('explanationInlinedApi');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="InlinedApiCardLink" onclick="hideid('InlinedApiCard');">
 Dismiss</button>            </div>
             </div>
           </section>
@@ -287,7 +292,7 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/drawable-v21">../../src/main/res/drawable-v21</a></span>: <span class="message">This folder configuration (<code>v21</code>) is unnecessary; <code>minSdkVersion</code> is 21. Merge all the resources in this folder into <code>drawable</code>.</span><br />
+<span class="location"><a href="../../src/main/res/drawable-v21">../../src/main/res/drawable-v21</a></span>: <span class="message">This folder configuration (<code>v21</code>) is unnecessary; <code>minSdkVersion</code> is 23. Merge all the resources in this folder into <code>drawable</code>.</span><br />
 </div>
 <div class="metadata"><div class="explanation" id="explanationObsoleteSdkInt" style="display: none;">
 This check flags version checks that are not necessary, because the <code>minSdkVersion</code> (or surrounding known API level) is already at least as high as the version checked for.<br/>
@@ -573,6 +578,32 @@ Feedback: <a href="https://issuetracker.google.com/issues/new?component=413132">
 </div>
 </div>
 <div class="issue">
+<div class="id">RepeatOnLifecycleWrongUsage<div class="issueSeparator"></div>
+</div>
+<div class="metadata"><div class="explanation">
+The repeatOnLifecycle APIs should be used when the View is created,                 that is in the <code>onCreate</code> lifecycle method for Activities, or <code>onViewCreated</code> in                 case you're using Fragments.<br/><div class="vendor">
+Vendor: Android Open Source Project<br/>
+Identifier: androidx.lifecycle<br/>
+Feedback: <a href="https://issuetracker.google.com/issues/new?component=413132">https://issuetracker.google.com/issues/new?component=413132</a><br/>
+</div>
+<br/>
+<br/></div>
+</div>
+</div>
+<div class="issue">
+<div class="id">UnsafeLifecycleWhenUsage<div class="issueSeparator"></div>
+</div>
+<div class="metadata"><div class="explanation">
+If the <code>Lifecycle</code> is destroyed within the block of                     <code>Lifecycle.whenStarted</code> or any similar <code>Lifecycle.when</code> method is suspended,                     the block will be cancelled, which will also cancel any child coroutine                     launched inside the block. As as a result, If you have a try finally block                     in your code, the finally might run after the Lifecycle moves outside                     the desired state. It is recommended to check the <code>Lifecycle.isAtLeast</code>                     before accessing UI in finally block. Similarly,                     if you have a catch statement that might catch <code>CancellationException</code>,                     you should check the <code>Lifecycle.isAtLeast</code> before accessing the UI. See                     documentation of <code>Lifecycle.whenStateAtLeast</code> for more details<br/><div class="vendor">
+Vendor: Android Open Source Project<br/>
+Identifier: androidx.lifecycle<br/>
+Feedback: <a href="https://issuetracker.google.com/issues/new?component=413132">https://issuetracker.google.com/issues/new?component=413132</a><br/>
+</div>
+<br/>
+<br/></div>
+</div>
+</div>
+<div class="issue">
 <div class="id">UnsafeOptInUsageError<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
@@ -648,84 +679,6 @@ Feedback: <a href="https://issuetracker.google.com/issues/new?component=460964">
 </div>
 </div>
 <div class="issue">
-<div class="id">UseAndroidAlpha<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-<code>ColorStateList</code> uses app:alpha without <code>android:alpha</code><br/><div class="vendor">
-Vendor: Android Open Source Project<br/>
-Identifier: androidx.appcompat<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=460343">https://issuetracker.google.com/issues/new?component=460343</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UseAppTint<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-<code>ImageView</code> or <code>ImageButton</code> uses <code>android:tint</code> instead of <code>app:tint</code><br/><div class="vendor">
-Vendor: Android Open Source Project<br/>
-Identifier: androidx.appcompat<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=460343">https://issuetracker.google.com/issues/new?component=460343</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UseCompatLoadingForColorStateLists<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Use Compat loading of color state lists<br/><div class="vendor">
-Vendor: Android Open Source Project<br/>
-Identifier: androidx.appcompat<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=460343">https://issuetracker.google.com/issues/new?component=460343</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UseCompatLoadingForDrawables<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Use Compat loading of drawables<br/><div class="vendor">
-Vendor: Android Open Source Project<br/>
-Identifier: androidx.appcompat<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=460343">https://issuetracker.google.com/issues/new?component=460343</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UseCompatTextViewDrawableApis<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Use Compat loading of compound text view drawables<br/><div class="vendor">
-Vendor: Android Open Source Project<br/>
-Identifier: androidx.appcompat<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=460343">https://issuetracker.google.com/issues/new?component=460343</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UseCompatTextViewDrawableXml<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-<code>TextView</code> uses <code>android:</code> compound drawable attributes instead of <code>app:</code> ones<br/><div class="vendor">
-Vendor: Android Open Source Project<br/>
-Identifier: androidx.appcompat<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=460343">https://issuetracker.google.com/issues/new?component=460343</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
 <div class="id">UseGetLayoutInflater<div class="issueSeparator"></div>
 </div>
 <div class="metadata"><div class="explanation">
@@ -746,58 +699,6 @@ AndroidX added new "require____()" versions of common "get___()" APIs, such as g
 Vendor: Android Open Source Project<br/>
 Identifier: androidx.fragment<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=460964">https://issuetracker.google.com/issues/new?component=460964</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UseSupportActionBar<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Use <code>AppCompatActivity.setSupportActionBar</code><br/><div class="vendor">
-Vendor: Android Open Source Project<br/>
-Identifier: androidx.appcompat<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=460343">https://issuetracker.google.com/issues/new?component=460343</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UseSwitchCompatOrMaterialCode<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Use <code>SwitchCompat</code> from AppCompat or <code>SwitchMaterial</code> from Material library<br/><div class="vendor">
-Vendor: Android Open Source Project<br/>
-Identifier: androidx.appcompat<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=460343">https://issuetracker.google.com/issues/new?component=460343</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UseSwitchCompatOrMaterialXml<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Use <code>SwitchCompat</code> from AppCompat or <code>SwitchMaterial</code> from Material library<br/><div class="vendor">
-Vendor: Android Open Source Project<br/>
-Identifier: androidx.appcompat<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=460343">https://issuetracker.google.com/issues/new?component=460343</a><br/>
-</div>
-<br/>
-<br/></div>
-</div>
-</div>
-<div class="issue">
-<div class="id">UsingOnClickInXml<div class="issueSeparator"></div>
-</div>
-<div class="metadata"><div class="explanation">
-Old versions of the platform do not properly support resolving <code>android:onClick</code><br/><div class="vendor">
-Vendor: Android Open Source Project<br/>
-Identifier: androidx.appcompat<br/>
-Feedback: <a href="https://issuetracker.google.com/issues/new?component=460343">https://issuetracker.google.com/issues/new?component=460343</a><br/>
 </div>
 <br/>
 <br/></div>

@@ -48,3 +48,13 @@ app.*.map.json
 lib/secret.dart
 android/local.properties
 
+// filepath: c:\Users\MINYONG\Desktop\netplus\android\app\build.gradle
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.example.netplus"
+        minSdkVersion 21
+        targetSdkVersion 33
+    }
+}
+

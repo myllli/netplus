@@ -1,13 +1,13 @@
 <lint-module
     format="1"
-    dir="C:\andapps\netplus\android\app"
+    dir="C:\Users\MINYONG\Desktop\netplus\android\app"
     name=":app"
     type="APP"
-    maven="android:app:unspecified"
-    agpVersion="8.7.0"
+    maven="netplus:app:"
+    agpVersion="8.3.0"
     buildFolder="build"
-    bootClassPath="C:\CookAndroid\SDK\platforms\android-35\android.jar;C:\CookAndroid\SDK\build-tools\34.0.0\core-lambda-stubs.jar"
-    javaSourceLevel="1.8"
+    bootClassPath="C:\flutter_windows_3.24.3-stable\platforms\android-35\android.jar;C:\flutter_windows_3.24.3-stable\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="17"
     compileTarget="android-35">
   <lintOptions
       abortOnError="true"

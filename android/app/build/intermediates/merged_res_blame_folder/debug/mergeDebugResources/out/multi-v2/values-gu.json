@@ -4,7 +4,7 @@
             "outputFile": "com.example.capstone.app-mergeDebugResources-41:/values-gu/values-gu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\김민성\\.gradle\\caches\\8.10.2\\transforms\\aef7967e32fe82332ef4b42ad82954e2\\transformed\\preference-1.2.1\\res\\values-gu\\values-gu.xml",
+                    "source": "C:\\Users\\MINYONG\\.gradle\\caches\\8.13\\transforms\\2cdd0b390c554c96597aa3e59e61090b\\transformed\\preference-1.2.1\\res\\values-gu\\values-gu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\김민성\\.gradle\\caches\\8.10.2\\transforms\\9400b99c4393d23db36029ebbdce0fab\\transformed\\core-1.13.1\\res\\values-gu\\values-gu.xml",
+                    "source": "C:\\Users\\MINYONG\\.gradle\\caches\\8.13\\transforms\\cb7a8fa150f5bbdab03a55c7f3f4f093\\transformed\\core-1.13.1\\res\\values-gu\\values-gu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\김민성\\.gradle\\caches\\8.10.2\\transforms\\9ab387ac7614f30212a8e96d3e0f0065\\transformed\\appcompat-1.1.0\\res\\values-gu\\values-gu.xml",
+                    "source": "C:\\Users\\MINYONG\\.gradle\\caches\\8.13\\transforms\\5be2b68f5ea35b11a700f1f779a14beb\\transformed\\appcompat-1.1.0\\res\\values-gu\\values-gu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

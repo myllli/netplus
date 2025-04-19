@@ -4,7 +4,7 @@
             "outputFile": "com.example.capstone.app-mergeDebugResources-41:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\김민성\\.gradle\\caches\\8.10.2\\transforms\\9ab387ac7614f30212a8e96d3e0f0065\\transformed\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\MINYONG\\.gradle\\caches\\8.13\\transforms\\5be2b68f5ea35b11a700f1f779a14beb\\transformed\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

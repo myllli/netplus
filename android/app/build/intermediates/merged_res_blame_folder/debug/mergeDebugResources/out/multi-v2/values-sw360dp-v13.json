@@ -4,7 +4,7 @@
             "outputFile": "com.example.capstone.app-mergeDebugResources-41:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\김민성\\.gradle\\caches\\8.10.2\\transforms\\aef7967e32fe82332ef4b42ad82954e2\\transformed\\preference-1.2.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\MINYONG\\.gradle\\caches\\8.13\\transforms\\2cdd0b390c554c96597aa3e59e61090b\\transformed\\preference-1.2.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

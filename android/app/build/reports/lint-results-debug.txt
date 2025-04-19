@@ -1,15 +1,30 @@
-C:\andapps\netplus\android\app\build.gradle:44: Warning: A newer version of org.jetbrains.kotlin:kotlin-stdlib-jdk7 than 1.9.22 is available: 2.1.0 [GradleDependency]
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.22'
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\MINYONG\Desktop\netplus\android\app\src\main\kotlin\com\example\capstone\MainActivity.kt:18: Warning: Field requires API level 28 (current min is 23): android.content.pm.PackageManager#GET_SIGNING_CERTIFICATES [InlinedApi]
+            val info = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNING_CERTIFICATES)
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Explanation for issues of type "GradleDependency":
-   This detector looks for usages of libraries where the version you are using
-   is not the current stable release. Using older versions is fine, and there
-   are cases where you deliberately want to stick with an older version.
-   However, you may simply not be aware that a more recent version is
-   available, and that is what this lint check helps find.
+   Explanation for issues of type "InlinedApi":
+   This check scans through all the Android API field references in the
+   application and flags certain constants, such as static final integers and
+   Strings, which were introduced in later versions. These will actually be
+   copied into the class files rather than being referenced, which means that
+   the value is available even when running on older devices. In some cases
+   that's fine, and in other cases it can result in a runtime crash or
+   incorrect behavior. It depends on the context, so consider the code
+   carefully and decide whether it's safe and can be suppressed or whether the
+   code needs to be guarded.
 
-C:\andapps\netplus\android\app\src\main\res\drawable-v21: Warning: This folder configuration (v21) is unnecessary; minSdkVersion is 21. Merge all the resources in this folder into drawable. [ObsoleteSdkInt]
+   If you really want to use this API and don't need to support older devices
+   just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+   files.
+
+   If your code is deliberately accessing newer APIs, and you have ensured
+   (e.g. with conditional execution) that this code will only ever be called
+   on a supported platform, then you can annotate your class or method with
+   the @TargetApi annotation specifying the local minimum SDK to apply, such
+   as @TargetApi(11), such that this check considers 11 rather than your
+   manifest file's minimum SDK as the required API level.
+
+C:\Users\MINYONG\Desktop\netplus\android\app\src\main\res\drawable-v21: Warning: This folder configuration (v21) is unnecessary; minSdkVersion is 23. Merge all the resources in this folder into drawable. [ObsoleteSdkInt]
 
    Explanation for issues of type "ObsoleteSdkInt":
    This check flags version checks that are not necessary, because the
@@ -20,11 +35,11 @@ C:\andapps\netplus\android\app\src\main\res\drawable-v21: Warning: This folder c
    where the version qualifier is less than or equal to the minSdkVersion,
    where the contents should be merged into the best folder.
 
-C:\andapps\netplus\android\app\src\main\res\mipmap-hdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
-C:\andapps\netplus\android\app\src\main\res\mipmap-mdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
-C:\andapps\netplus\android\app\src\main\res\mipmap-xhdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
-C:\andapps\netplus\android\app\src\main\res\mipmap-xxhdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
-C:\andapps\netplus\android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+C:\Users\MINYONG\Desktop\netplus\android\app\src\main\res\mipmap-hdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+C:\Users\MINYONG\Desktop\netplus\android\app\src\main\res\mipmap-mdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+C:\Users\MINYONG\Desktop\netplus\android\app\src\main\res\mipmap-xhdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+C:\Users\MINYONG\Desktop\netplus\android\app\src\main\res\mipmap-xxhdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+C:\Users\MINYONG\Desktop\netplus\android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
 
    Explanation for issues of type "IconLauncherShape":
    According to the Android Design Guide
@@ -36,7 +51,7 @@ C:\andapps\netplus\android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png: Warn
    The unique silhouette implies that your launcher icon should not be a
    filled square.
 
-C:\andapps\netplus\android\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+C:\Users\MINYONG\Desktop\netplus\android\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
 ^
 

@@ -1,7 +1,7 @@
 <variant
     name="debug"
     package="com.example.capstone"
-    minSdkVersion="21"
+    minSdkVersion="23"
     targetSdkVersion="35"
     debuggable="true"
     mergedManifest="build\intermediates\merged_manifest\debug\processDebugMainManifest\AndroidManifest.xml"
@@ -14,7 +14,7 @@
   <testSourceProviders>
     <sourceProvider
         manifests="src\test\AndroidManifest.xml"
-        javaDirectories="src\test\java;src\test\kotlin;src\testDebug\java;src\testDebug\kotlin"
+        javaDirectories="src\test\java;src\testDebug\java;src\test\kotlin;src\testDebug\kotlin"
         assetsDirectories="src\test\assets;src\testDebug\assets"
         unitTest="true"/>
   </testSourceProviders>
@@ -22,8 +22,8 @@
   </testFixturesSourceProviders>
   <manifestPlaceholders>
     <placeholder
-        name="applicationName"
-        value="android.app.Application" />
+        name="KAKAO_NATIVE_APP_KEY"
+        value="75080664d9d7058a5657030c4ad5bad6" />
   </manifestPlaceholders>
   <artifact
       type="UNIT_TEST">

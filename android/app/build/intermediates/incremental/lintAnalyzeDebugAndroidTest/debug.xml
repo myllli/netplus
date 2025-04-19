@@ -1,12 +1,12 @@
 <variant
     name="debug"
     package="com.example.capstone"
-    minSdkVersion="21"
+    minSdkVersion="23"
     targetSdkVersion="35"
     debuggable="true"
     mergedManifest="build\intermediates\merged_manifest\debug\processDebugMainManifest\AndroidManifest.xml"
     partialResultsDir="build\intermediates\android_test_lint_partial_results\debug\lintAnalyzeDebugAndroidTest\out"
-    desugaredMethodsFiles="C:\Users\김민성\.gradle\caches\8.10.2\transforms\3b054de7f095a03ef81bb0783250058e\transformed\D8BackportedDesugaredMethods.txt">
+    desugaredMethodsFiles="C:\Users\MINYONG\.gradle\caches\8.13\transforms\bcf05444b2fed0b0535840bc1dd65742\transformed\D8BackportedDesugaredMethods.txt">
   <buildFeatures
       namespacing="REQUIRED"/>
   <sourceProviders>
@@ -23,13 +23,13 @@
   </testFixturesSourceProviders>
   <manifestPlaceholders>
     <placeholder
-        name="applicationName"
-        value="android.app.Application" />
+        name="KAKAO_NATIVE_APP_KEY"
+        value="75080664d9d7058a5657030c4ad5bad6" />
   </manifestPlaceholders>
   <artifact
       type="INSTRUMENTATION_TEST"
       applicationId="com.example.capstone.test"
       generatedResourceFolders="build\generated\res\resValues\androidTest\debug"
-      desugaredMethodsFiles="C:\Users\김민성\.gradle\caches\8.10.2\transforms\3b054de7f095a03ef81bb0783250058e\transformed\D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="C:\Users\MINYONG\.gradle\caches\8.13\transforms\bcf05444b2fed0b0535840bc1dd65742\transformed\D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>
