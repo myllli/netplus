@@ -21,7 +21,7 @@ if (localPropertiesFile.exists()) {
 }
 
 android {
-    namespace 'com.example.capstone'
+    namespace "com.example.netplus"
     compileSdkVersion 35
 
     defaultConfig {
@@ -46,14 +46,14 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "17"
-        languageVersion = "1.9"
-        apiVersion = "1.9"
+        jvmTarget = "11"
+        languageVersion = "1.6"
+        apiVersion = "1.6"
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
 

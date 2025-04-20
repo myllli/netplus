@@ -178,10 +178,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_naver_login
-      sha256: "69d62da60e866b09894f2d632d7d1cb36eee17164b9e46e33d86ebee4b91cd42"
+      sha256: beaccb21de56d3ad7e050a4aae6ef12661e2473bd644742b3157b115c621e273
       url: "https://pub.dev"
     source: hosted
-    version: "1.8.0"
+    version: "1.7.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
