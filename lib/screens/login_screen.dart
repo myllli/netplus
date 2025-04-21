@@ -1,9 +1,45 @@
 // lib/screens/login_screen.dart
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../services/kakao_login_service.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
+
+  Future<void> _handleNaverLogin(BuildContext context) async {
+    try {
+      const platform = MethodChannel('com.example.capstone/naver_login');
+      final Map<dynamic, dynamic> result = await platform.invokeMethod('login');
+
+      if (result['status'] == 'success') {
+        final String id = result['id'];
+        final String email = result['email'];
+        final String name = result['name'];
+
+        print('네이버 로그인 성공');
+        print('ID: $id');
+        print('Email: $email');
+        print('Name: $name');
+
+        Navigator.pushReplacementNamed(context, '/home');
+      } else {
+        print('네이버 로그인 실패: ${result['error']}');
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('네이버 로그인 실패')),
+        );
+      }
+    } on PlatformException catch (e) {
+      print('네이버 로그인 에러: ${e.message}');
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('네이버 로그인 에러: ${e.message}')),
+      );
+    } catch (e) {
+      print('네이버 로그인 에러: $e');
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('네이버 로그인 실패')),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +68,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 20),
             GestureDetector(
               onTap: () {
-                // 네이버 로그인 구현 예정
+                _handleNaverLogin(context);
               },
               child: Image.asset(
                 'assets/images/naver_login.png',

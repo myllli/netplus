@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="client_id">yeSzw1A23EmZCwxmY46j</string>
-    <string name="client_secret">uOz4XCe6NT</string>
-    <string name="client_name">netplus</string>
+    <string name="app_name">capstone</string>
+    <string name="naver_client_id">yeSzw1A23EmZCwxmY46j</string>
+    <string name="naver_client_secret">uOz4XCe6NT</string>
+    <string name="naver_client_name">Capstone</string>
 </resources> 
