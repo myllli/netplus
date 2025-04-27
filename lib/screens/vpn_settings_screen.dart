@@ -67,6 +67,7 @@ yGpoZoksFr2h4ELBZ9A0xfH24KKmAx40GZxFX6wo8KUoNCvTluM+10Jc
     return Scaffold(
       appBar: AppBar(
         title: const Text('VPN 설정'),
+        toolbarHeight: 28,
       ),
       body: Consumer<VpnProvider>(
         builder: (context, vpnProvider, child) {
@@ -195,12 +196,6 @@ yGpoZoksFr2h4ELBZ9A0xfH24KKmAx40GZxFX6wo8KUoNCvTluM+10Jc
                                   color:
                                       isConnected ? Colors.green : Colors.red,
                                 ),
-                            textAlign: TextAlign.center,
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            '서버: ${server}:${port}',
-                            style: Theme.of(context).textTheme.bodyLarge,
                             textAlign: TextAlign.center,
                           ),
                         ],
