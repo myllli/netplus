@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
+import 'screens/vpn_settings_screen.dart';
+import 'providers/vpn_provider.dart';
 import 'secret.dart';
 
 void main() {
@@ -16,29 +19,35 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'NetPlus',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.black,
-        brightness: Brightness.dark,
-        colorScheme: ColorScheme.dark(
-          primary: Colors.deepPurple,
-          secondary: Colors.deepPurple,
-          surface: Colors.black,
-          background: Colors.black,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => VpnProvider()),
+      ],
+      child: MaterialApp(
+        title: 'NetPlus',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          scaffoldBackgroundColor: Colors.black,
+          brightness: Brightness.dark,
+          colorScheme: ColorScheme.dark(
+            primary: Colors.deepPurple,
+            secondary: Colors.deepPurple,
+            surface: Colors.black,
+            background: Colors.black,
+          ),
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.black,
+            elevation: 0,
+          ),
+          useMaterial3: true,
         ),
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.black,
-          elevation: 0,
-        ),
-        useMaterial3: true,
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const LoginScreen(),
+          '/home': (context) => const HomeScreen(),
+          '/vpn-settings': (context) => const VpnSettingsScreen(),
+        },
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const LoginScreen(),
-        '/home': (context) => const HomeScreen(),
-      },
     );
   }
 }

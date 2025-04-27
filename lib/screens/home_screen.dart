@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'package:provider/provider.dart';
+import '../providers/vpn_provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -57,19 +59,40 @@ class _HomeScreenState extends State<HomeScreen>
     });
   }
 
-  void _toggleConnection() {
-    setState(() {
-      isConnected = !isConnected;
-      if (isConnected) {
-        _controller.repeat(reverse: true);
-        _startTimer();
+  Future<void> _toggleConnection() async {
+    final vpnProvider = Provider.of<VpnProvider>(context, listen: false);
+
+    try {
+      if (!isConnected) {
+        await vpnProvider.startVpn(
+          server: '108.61.180.5',
+          port: '992',
+          protocol: 'udp',
+          username: '',
+          password: '',
+          ca: '',
+          cert: '',
+          key: '',
+        );
+
+        setState(() {
+          isConnected = true;
+          _controller.repeat(reverse: true);
+          _startTimer();
+        });
         _showConnectedSnackBar();
       } else {
-        _controller.stop();
-        _stopTimer();
+        await vpnProvider.stopVpn();
+        setState(() {
+          isConnected = false;
+          _controller.stop();
+          _stopTimer();
+        });
         _showDisconnectedSnackBar();
       }
-    });
+    } catch (e) {
+      _showErrorSnackBar('VPN 연결에 실패했습니다: ${e.toString()}');
+    }
   }
 
   void _showConnectedSnackBar() {
@@ -88,6 +111,16 @@ class _HomeScreenState extends State<HomeScreen>
         content: Text('VPN 연결이 해제되었습니다'),
         backgroundColor: Colors.red,
         duration: Duration(seconds: 2),
+      ),
+    );
+  }
+
+  void _showErrorSnackBar(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor: Colors.red,
+        duration: const Duration(seconds: 3),
       ),
     );
   }
@@ -144,6 +177,14 @@ class _HomeScreenState extends State<HomeScreen>
         title: const Text('NetPlus'),
         backgroundColor: Colors.black,
         elevation: 0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () {
+              Navigator.pushNamed(context, '/vpn-settings');
+            },
+          ),
+        ],
       ),
       body: Container(
         color: Colors.black,
@@ -201,13 +242,6 @@ class _HomeScreenState extends State<HomeScreen>
                   color: Colors.white,
                 ),
               ),
-              if (isConnected) ...[
-                const SizedBox(height: 10),
-                Text(
-                  '연결 시간: ${_formatDuration(_connectionTime)}',
-                  style: const TextStyle(fontSize: 16, color: Colors.white70),
-                ),
-              ],
               const SizedBox(height: 50),
               GestureDetector(
                 onTap: _showServerSelectionDialog,
